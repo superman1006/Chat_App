@@ -4,21 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title>Chat Room</title>
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-
-  <div id="status"></div>
-  <ul id="chat-messages"></ul>
-  <form id="chat-form">
-    <input id="chat-input" type="text" placeholder="Type your message...">
-    <button>Send</button>
-  </form>
-
+  <div id="join-container" class="join-container">
+    <form id="join-form" class="join-form">
+      <h1>Join Chat Room</h1>
+      <div class="form-control">
+        <label for="nickname">Nickname:</label>
+        <input type="text" id="nickname" name="nickname" placeholder="Enter your nickname">
+      </div>
+      <button type="submit" class="btn">Join</button>
+    </form>
+  </div>
   <script src="/socket.io/socket.io.js"></script>
-  <script src="app.js"></script>
+  <script src="/javascripts/app.js"></script>
 </body>
 
 </html>

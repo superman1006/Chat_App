@@ -1,4 +1,4 @@
-app.use('/socket.io', express.static(__dirname + '/node_modules/socket.io-client/dist/'));
+app.use(express.static(__dirname + '/node_modules/socket.io-client/dist/'));
 
 const express = require('express');
 const app = express();
@@ -12,7 +12,7 @@ io.on('connection', (socket) => {
 
   // 监听新用户加入聊天室事件
   socket.on('user joined', (username) => {
-    socket.broadcast.emit('user joined', username);
+    socket.emit('user joined', username);
   });
 
   // 监听用户发送消息事件
@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log('user disconnected');
     const username = socket.handshake.query.username;
-    socket.broadcast.emit('user left', username);
+    socket.emit('user left', username);
   });
 });
 
