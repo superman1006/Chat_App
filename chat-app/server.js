@@ -1,3 +1,5 @@
+app.use('/socket.io', express.static(__dirname + '/node_modules/socket.io-client/dist/'));
+
 const express = require('express');
 const app = express();
 const http = require('http').createServer(app);
@@ -34,4 +36,9 @@ http.listen(3000, () => {
 app.get('/stylesheets/style.css', function (req, res) {
   res.type('text/css');
   res.sendFile(__dirname + '/public/stylesheets/style.css');
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });

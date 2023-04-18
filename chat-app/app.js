@@ -72,3 +72,15 @@ const PORT = process.env.PORT || 3000;
 http.listen(PORT, () => {
   console.log(`listening on *:${PORT}`);
 });
+
+// 添加以下代码来处理 POST 请求
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// 用 module.exports 导出 app 实例
+module.exports = app;
+
+// 以便 Express 能够正确地解析静态文件
+app.use(express.static(path.join(__dirname, 'public')));
+
