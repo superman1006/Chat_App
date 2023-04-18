@@ -1,0 +1,21 @@
+好的，请按照以下步骤运行你的聊天室应用程序：
+
+在终端中进入应用程序文件夹：
+bash
+Copy code
+cd Chat
+安装所有依赖项：
+Copy code
+npm install
+启动服务器：
+Copy code
+node server.js
+在浏览器中打开 http://localhost:3000/，你会看到聊天室的界面。
+
+打开另一个浏览器窗口或标签页并访问相同的 URL（http://localhost:3000/）。
+
+在一个浏览器窗口或标签页中输入用户名，然后单击“Join Chat”按钮。
+
+在另一个浏览器窗口或标签页中输入另一个用户名，然后单击“Join Chat”按钮。
+
+现在你可以在这两个浏览器窗口或标签页之间进行实时聊天了。
