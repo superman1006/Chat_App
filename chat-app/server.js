@@ -1,18 +1,21 @@
-app.use(express.static(__dirname + '/node_modules/socket.io-client/dist/'));
-
 const express = require('express');
 const app = express();
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+const http = require('http');
+const server = http.createServer(app);
+const io = require('socket.io')(server);
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
 
 io.on('connection', (socket) => {
   console.log('a user connected');
 
   // 监听新用户加入聊天室事件
   socket.on('user joined', (username) => {
-    socket.emit('user joined', username);
+    socket.broadcast.emit('user joined', username);
   });
 
   // 监听用户发送消息事件

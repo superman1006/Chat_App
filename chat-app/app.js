@@ -24,7 +24,7 @@ socket.on('user joined', (username) => {
 chatForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const message = chatInput.value;
-  socket.emit('chat message', message);
+  socket.send('chat message', message);
   chatInput.value = '';
 });
 
