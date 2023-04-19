@@ -269,7 +269,7 @@ a:hover {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   height: calc(100% - 70px);
   padding: 1rem;
   background-color: #fff;
@@ -277,7 +277,11 @@ a:hover {
 }
 
 .chat-sidebar {
+  width: 100%;
+  height: auto;
+  justify-content: center;
   text-align: center;
+  order: -1;
   flex: 1;
   padding: 10px;
   background: #aaecaa;
@@ -286,10 +290,10 @@ a:hover {
 }
 
 .chat-sidebar h3 {
-  font-size: 1.5em;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   color: #333;
   margin-bottom: 10px;
 }
@@ -336,6 +340,7 @@ a:hover {
 
 
 .chat-box {
+  width: 100%;
   border-radius: 10px;
   border: 1px solid #d9d9d9;
   background-color: #f2f2f2;
