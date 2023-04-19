@@ -294,6 +294,11 @@ a:hover {
   margin-bottom: 10px;
 }
 
+.chat-form-container button.btn {
+  background-color: #33cc99;
+  color: #fff;
+}
+
 /* .chat-messages {
   flex: 3;
   height: 400px;
@@ -329,20 +334,32 @@ a:hover {
   color: #333;
 } */
 
-.chat-form-container {
+
+.chat-box {
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  background-color: #f2f2f2;
+  height: 400px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+
+/* .chat-form-container {
   width: 100%;
   padding: 15px;
   background: #f4f4f4;
   border-top: 1px solid #ccc;
 }
+*/
 
-.chat-form-container button.btn {
-  background-color: #33cc99;
-  color: #fff;
-}
+
 
 /* 调整消息框滚动条样式 */
-.chat-messages::-webkit-scrollbar {
+
+
+
+/* .chat-messages::-webkit-scrollbar {
   width: 8px;
 }
 
@@ -353,7 +370,8 @@ a:hover {
 
 .chat-messages::-webkit-scrollbar-thumb:hover {
   background-color: #aaa;
-}
+} */
+
 
 
 /* 调整消息发送按钮样式 */
