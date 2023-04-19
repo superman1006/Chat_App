@@ -49,23 +49,24 @@ a:hover {
 }
 
 .intro-section h1 {
-  font-size: 3.5rem;
+
+  font-size: 4.5rem;
   margin-bottom: 30px;
 }
 
 .intro-section p {
-  font-size: 1.125rem;
-  margin-bottom: 30px;
+  font-size: 1.3rem;
+  margin-bottom: 60px;
 }
 
 .intro-section ul {
   list-style: none;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   padding: 0;
 }
 
 .intro-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .intro-section ul li strong {
@@ -81,6 +82,11 @@ a:hover {
   padding: 5px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out;
+}
+
+.intro-img img:hover {
+  transform: scale(1.05);
 }
 
 .btn-learn-more {
@@ -120,6 +126,7 @@ a:hover {
   font-weight: 600;
   color: #333;
   margin-bottom: 30px;
+  font-style: italic;
 }
 
 .about-section p {
@@ -129,32 +136,27 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.about-section hr {
+  text-align: center;
+  width: 1100px;
+  height: 10px
+}
+
+/* 为 about-section 中的 ul 和 li 设置样式 */
 .about-section ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 30px;
+  list-style: disc;
+  /* 设置列表标志为实心圆点 */
+  margin: 1em 0;
+  /* 设置上下边距为 1em */
+  padding-left: 1.5em;
+  /* 设置左边距为 1.5em */
 }
 
 .about-section li {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #666;
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 20px;
+  margin: 0.5em 0;
+  /* 设置上下边距为 0.5em */
 }
 
-.about-section li:before {
-  content: "\f00c";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 16px;
-  color: #333;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 
 
