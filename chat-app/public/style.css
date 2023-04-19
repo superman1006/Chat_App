@@ -278,9 +278,10 @@ a:hover {
 
 .chat-sidebar {
   flex: 1;
-  padding: 15px;
-  background: #f4f4f4;
+  padding: 10px;
+  background: #aaecaa;
   border-right: 1px solid #ccc;
+  border-radius: 20px;
 }
 
 .chat-sidebar h3 {
@@ -349,6 +350,11 @@ a:hover {
   border-top: 1px solid #ccc;
 }
 
+.chat-form-container button.btn {
+  background-color: #33cc99;
+  color: #fff;
+}
+
 /* 调整消息框滚动条样式 */
 .chat-messages::-webkit-scrollbar {
   width: 8px;
@@ -362,6 +368,7 @@ a:hover {
 .chat-messages::-webkit-scrollbar-thumb:hover {
   background-color: #aaa;
 }
+
 
 /* 调整消息发送按钮样式 */
 #send {
