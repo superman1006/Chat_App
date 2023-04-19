@@ -6,9 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Chat App</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="reference/Bootstrap.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Custom JavaScript -->
+  <script src="reference/index.js"></script>
+  <!-- jQuery -->
+  <script src="reference/jQuery.js"></script>
+  <!-- Popper.js -->
+  <script src="reference/Popper.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="reference/Bootstrap.js"></script>
+  <script src="socket.io.js"></script>
+  <script src="app.js"></script>
 </head>
 
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="introduction.html">My Personal Website</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link mr-3" href="introduction.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-3" href="About.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-5" href="index.html">Chat</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Chat-Section -->
   <div class="chat-container">
     <header class="chat-header">
       <h1><i class="fas fa-smile"></i> ChatCord</h1>
@@ -30,8 +68,17 @@
       </form>
     </div>
   </div>
-  <script src="socket.io.js"></script>
-  <script src="app.js"></script>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>© 2023 My Personal Website. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -152,53 +152,52 @@ a:hover {
   color: #333;
   position: absolute;
   left: 0;
-
-  /* 聊天室消息列表样式 */
-  #chat-messages {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
-    height: 300px;
-    border: 1px solid #ccc;
-  }
-
-  #chat-messages li {
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-  }
-
-  #chat-messages li.system {
-    background-color: #ddd;
-  }
-
-  /* 聊天室表单样式 */
-  #chat-form {
-    display: flex;
-  }
-
-  #chat-input {
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-
-  #chat-submit {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  #chat-submit:hover {
-    background-color: #0069d9;
-  }
-
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* 聊天室消息列表样式 */
+#chat-messages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  height: 300px;
+  border: 1px solid #ccc;
+}
+
+#chat-messages li {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+#chat-messages li.system {
+  background-color: #ddd;
+}
+
+/* 聊天室表单样式 */
+#chat-form {
+  display: flex;
+}
+
+#chat-input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+#chat-submit {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#chat-submit:hover {
+  background-color: #0069d9;
 }
 
 /* Footer Section */
