@@ -162,15 +162,15 @@ a:hover {
   margin: 0;
   padding: 10px;
   overflow: scroll;
-  height: 400px;
-  border: 1px solid #ccc;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 #chat-messages li {
   margin-bottom: 10px;
   padding: 5px 10px;
-  border-radius: 5px;
-  background-color: #f8f8f8;
+  background-color: transparent;
 }
 
 #chat-messages li.system {
