@@ -8,7 +8,7 @@ const activeIndicator = document.createElement('div');
 activeIndicator.classList.add('active-indicator');
 
 // 将横条添加到导航栏中
-home.parentElement.appendChild(activeIndicator);
+// home.parentElement.appendChild(activeIndicator);
 
 // 定义函数，根据当前激活的单词更新横条的位置和颜色
 function updateActiveIndicatorPosition () {
