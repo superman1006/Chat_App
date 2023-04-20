@@ -90,15 +90,15 @@ a:hover {
 }
 
 .btn-learn-more {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #4b5d70;
+  border-color: #ffffff;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-learn-more:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #4bcfb7;
+  border-color: #ffffff;
 }
 
 /* About section */
