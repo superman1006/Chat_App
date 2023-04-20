@@ -16,7 +16,6 @@ io.on('connection', (socket) => {
   // Broadcast a message to all other connected clients
   socket.broadcast.emit('chat message', 'a user connected');
 
-
   // Listen for chat messages
   socket.on('chat message', (msg) => {
     console.log('message: ' + msg);
@@ -24,12 +23,24 @@ io.on('connection', (socket) => {
   });
 
   // Handle disconnections
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
+  socket.on('disconnecting', (reason) => {
+    console.log('user disconnecting', reason);
+
+    // get the rooms of the socket
+    const rooms = Object.keys(socket.rooms);
+
+    // emit "you have disconnected" to the current socket only
+    socket.emit('chat message', 'you have disconnected');
+
+    // emit "a user has disconnected" to all other sockets in the room
+    rooms.forEach((room) => {
+      if (room !== socket.id) {
+        socket.to(room).emit('chat message', 'a user has disconnected');
+      }
+    });
   });
 });
 
-// Start the server
 http.listen(3000, () => {
   console.log('listening on *:3000');
 });

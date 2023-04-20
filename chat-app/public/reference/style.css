@@ -354,8 +354,6 @@ a:hover {
 }
 
 
-
-
 /* 调整消息发送按钮样式 */
 #send {
   flex: 1;
@@ -373,22 +371,12 @@ a:hover {
   background-color: #444;
 }
 
-
-
-
-
-
 .message {
   background-color: #f1f0f0;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
 }
-
-
-
-
-
 
 /* Footer Section */
 footer {
