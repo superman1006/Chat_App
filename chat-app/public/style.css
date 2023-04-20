@@ -146,13 +146,15 @@ a:hover {
 .about-section ul {
   list-style: disc;
   /* 设置列表标志为实心圆点 */
-  margin: 1em 0;
+  margin: 1.5em 0;
   /* 设置上下边距为 1em */
-  padding-left: 1.5em;
+  padding-left: 3em;
   /* 设置左边距为 1.5em */
 }
 
 .about-section li {
+  font-size: 17px;
+  font-weight: 400;
   margin: 0.5em 0;
   /* 设置上下边距为 0.5em */
 }
