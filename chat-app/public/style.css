@@ -211,22 +211,6 @@ a:hover {
   background-color: #0069d9;
 }
 
-/* 调整输入框样式 */
-
-#msg {
-  flex: 6;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  color: #333;
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-}
-
-#msg:focus {
-  outline: none;
-  box-shadow: 0 0 5px #ccc;
-}
 
 /* Add this CSS to center and enlarge the chat container */
 .chat-container {
@@ -326,31 +310,48 @@ a:hover {
   /* 或者使用 overflow: hidden; */
 }
 
-select {
-  width: 80px;
-  height: 50px;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
+
+/* 调整输入框样式 */
+
+#msg {
+  flex: 6;
+  padding: 0.5rem;
+  font-size: 1.2rem;
   color: #333;
-  appearance: none;
-  /* 去掉默认下拉箭头 */
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.7em top 50%;
-  background-size: 1em auto;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
 }
 
-#user-select,
-#msg,
-.btn {
+#msg:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ccc;
+}
+
+#msg .btn {
   margin-right: 10px;
 }
 
 
+
+#name {
+  flex: 6;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#name .btn {
+  margin-right: 10px;
+}
+
+#name:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ccc;
+}
 
 
 
@@ -372,10 +373,6 @@ select {
   background-color: #444;
 }
 
-#msg:focus {
-  outline: none;
-  box-shadow: 0 0 5px #ccc;
-}
 
 
 /* Footer Section */
