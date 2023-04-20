@@ -2,7 +2,7 @@
  * @Author: superman1006 1402788264@qq.com
  * @Date: 2023-04-18 22:16:32
  * @LastEditors: superman1006 1402788264@qq.com
- * @LastEditTime: 2023-04-20 22:06:07
+ * @LastEditTime: 2023-04-20 23:26:11
  * @FilePath: \chat\chat-app\public\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -52,7 +52,7 @@
 
     <header class="chat-header">
       <h1><i class="fas fa-smile"></i> Chat-Room</h1>
-      <a href="introduction.html" class="btn">Leave Room</a>
+      <a href="#" class="btn">Leave Room</a>
     </header>
 
     <main class="chat-main">
@@ -99,6 +99,30 @@
       div.innerText = msg;
       chatBox.appendChild(div);
     });
+
+
+    // 获取Leave Room按钮
+    const leaveBtn = document.querySelector('.btn');
+    // 获取名字输入框和信息输入框
+    const nameInput = document.getElementById('name');
+    const msgInput = document.getElementById('msg');
+
+    // 点击Leave Room按钮时执行的函数
+    leaveBtn.addEventListener('click', () => {
+      // 隐藏名字输入框和信息输入框
+      nameInput.style.display = 'none';
+      msgInput.style.display = 'none';
+      // 在用户A的聊天框中显示一条信息
+      const chatBox = document.querySelector('.chat-box');
+      const div = document.createElement('div');
+      div.classList.add('message');
+      div.innerText = 'you have disconnected';
+      chatBox.appendChild(div);
+      // 在其他用户的聊天框中显示一条信息
+      socket.broadcast.emit('chat message', 'a user has disconnected');
+    });
+
+
 
   </script>
 </body>
