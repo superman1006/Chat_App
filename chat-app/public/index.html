@@ -2,7 +2,7 @@
  * @Author: superman1006 1402788264@qq.com
  * @Date: 2023-04-18 22:16:32
  * @LastEditors: superman1006 1402788264@qq.com
- * @LastEditTime: 2023-04-20 15:37:21
+ * @LastEditTime: 2023-04-20 17:08:38
  * @FilePath: \chat\chat-app\public\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,38 +18,9 @@
   <link rel="stylesheet" href="reference/Bootstrap.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="reference/style.css">
-  <!-- Custom JavaScript -->
-  <script src="reference/index.js"></script>
   <!-- 引入 socket.io.js -->
-  <script src="socket.io.js"></script>
-  <!-- <script src="server.js"></script> -->
-  <script src="../server.js"></script>
-
-  <!-- 连接到服务器 -->
-  <script>
-    const socket = io();
-
-    // 监听发送聊天消息事件
-    const chatForm = document.getElementById('chat-form');
-    chatForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const msgInput = document.getElementById('msg');
-      const nameInput = document.getElementById('name');
-      const msg = `${nameInput.value}: ${msgInput.value}`;
-      socket.emit('chat message', msg);
-      msgInput.value = '';
-    });
-
-    // 监听接收聊天消息事件
-    const chatBox = document.querySelector('.chat-box');
-    socket.on('chat message', (msg) => {
-      const div = document.createElement('div');
-      div.classList.add('message');
-      div.innerText = msg;
-      chatBox.appendChild(div);
-    });
-  </script>
-
+  <script src="../socket.io/socket.io.js"></script>
+  
 </head>
 
 <body>
@@ -107,6 +78,29 @@
       </form>
     </div>
   </div>
+  <script>
+    const socket = io();
+    // 监听发送聊天消息事件
+    const chatForm = document.getElementById('chat-form');
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msgInput = document.getElementById('msg');
+      const nameInput = document.getElementById('name');
+      const msg = `${nameInput.value}: ${msgInput.value}`;
+      socket.emit('chat message', msg);
+      msgInput.value = '';
+    });
+
+    // 监听接收聊天消息事件
+    const chatBox = document.querySelector('.chat-box');
+    socket.on('chat message', (msg) => {
+      const div = document.createElement('div');
+      div.classList.add('message');
+      div.innerText = msg;
+      chatBox.appendChild(div);
+    });
+
+  </script>
 </body>
 
 </html>
