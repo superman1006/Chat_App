@@ -161,8 +161,6 @@ a:hover {
 
 
 
-
-
 /* Chat聊天室消息列表样式 */
 #chat-messages {
   list-style: none;
@@ -245,7 +243,7 @@ a:hover {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: #fff;
-  background-color: #433f46;
+  background-color: #856e96;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -301,18 +299,32 @@ a:hover {
 .chat-box {
   width: 100%;
   height: 600px;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 1px solid #d9d9d9;
   background-color: #b5a9a9;
   margin-top: 20px;
   padding: 20px;
-  overflow: hidden;
+  overflow: auto;
   /* 或者使用 overflow: hidden; */
+}
+
+/*定义整体的宽度*/
+.chat-box::-webkit-scrollbar {}
+
+
+/* 定义滚动条轨道 */
+.chat-box::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* 定义滑块 */
+.chat-box::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
 }
 
 
 /* 调整输入框样式 */
-
 #msg {
   flex: 6;
   padding: 0.5rem;
@@ -320,7 +332,7 @@ a:hover {
   color: #333;
   background-color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 #msg:focus {
