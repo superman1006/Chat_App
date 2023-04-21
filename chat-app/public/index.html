@@ -117,6 +117,12 @@
       socket.emit('user left');
     });
 
+    window.addEventListener("beforeunload", function (event) {
+      socket.emit('chat message', 'you have disconnected');
+      // Broadcast a message to all other connected clients
+      socket.broadcast.emit('chat message', 'a user has disconnected');
+    });
+
   </script>
 </body>
 
