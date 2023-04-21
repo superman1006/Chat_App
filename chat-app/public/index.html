@@ -99,7 +99,7 @@
       div.innerText = msg;
       chatBox.appendChild(div);
     });
-    
+
 
     // 获取Leave Room按钮
     const leaveBtn = document.querySelector('.btn');
@@ -121,7 +121,7 @@
       div.innerText = 'you have disconnected';
       chatBox.appendChild(div);
       // 向服务器发送用户断开连接的事件
-      socket.emit('disconnect');
+      socket.emit('user left');
     });
 
   </script>
