@@ -308,10 +308,6 @@ a:hover {
   /* 或者使用 overflow: hidden; */
 }
 
-/*定义整体的宽度*/
-.chat-box::-webkit-scrollbar {}
-
-
 /* 定义滚动条轨道 */
 .chat-box::-webkit-scrollbar-track {
   background-color: #f1f1f1;
