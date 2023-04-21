@@ -2,7 +2,7 @@
  * @Author: superman1006 1402788264@qq.com
  * @Date: 2023-04-18 22:15:14
  * @LastEditors: superman1006 1402788264@qq.com
- * @LastEditTime: 2023-04-21 19:19:58
+ * @LastEditTime: 2023-04-21 20:02:12
  * @FilePath: \chat\chat-app\server.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -58,6 +58,10 @@ io.on('connection', (socket) => {
   socket.on('get user list', () => {
     const userList = Array.from(onlineUsers.values());
     socket.emit('user list', userList);
+  });
+
+  socket.on('send user list', (message) => {
+    socket.emit('chat message', message);
   });
 });
 
