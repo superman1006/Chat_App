@@ -2,7 +2,7 @@
  * @Author: superman1006 1402788264@qq.com
  * @Date: 2023-04-18 22:15:14
  * @LastEditors: superman1006 1402788264@qq.com
- * @LastEditTime: 2023-04-21 20:02:12
+ * @LastEditTime: 2023-04-21 20:41:20
  * @FilePath: \chat\chat-app\server.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -19,6 +19,9 @@ app.use(express.static(__dirname + '/public'));
 // Handle socket.io connections
 io.on('connection', (socket) => {
   console.log('a user connected');
+
+  // 当有新用户连接时将其加入在线用户列表
+  onlineUsers.set(socket.id, { id: socket.id });
 
   // Send a welcome message to the new user
   socket.emit('chat message', 'you are connected');
@@ -37,6 +40,8 @@ io.on('connection', (socket) => {
     console.log('user left', reason);
     // Send a welcome message to the new user
     socket.emit('chat message', 'you have disconnected');
+    // 当有用户断开连接时将其从在线用户列表中移除
+    onlineUsers.delete(socket.id);
     // Broadcast a message to all other connected clients
     socket.broadcast.emit('chat message', 'a user has disconnected');
   });
@@ -51,8 +56,6 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('chat message', 'a user has disconnected');
   });
 
-  // 当有新用户连接时将其加入在线用户列表
-  onlineUsers.set(socket.id, { id: socket.id });
 
   // 处理获取在线用户列表的请求
   socket.on('get user list', () => {
