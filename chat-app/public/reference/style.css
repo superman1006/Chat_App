@@ -39,7 +39,7 @@ a:hover {
 }
 
 .nav-link:hover::before {
-  background-color: #007bff;
+  background-color: #82e3ea;
 }
 
 /* Introduction Section */
@@ -243,7 +243,7 @@ a:hover {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: #fff;
-  background-color: #856e96;
+  background-color: #a09090;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -251,7 +251,11 @@ a:hover {
 }
 
 .chat-header .btn:hover {
-  background-color: #9e7575;
+  background-color: #8ddfdf;
+}
+
+#user-list {
+  margin-left: 800px;
 }
 
 .chat-main {
@@ -322,39 +326,32 @@ a:hover {
 
 /* 调整输入框样式 */
 #msg {
-  flex: 6;
+  flex: 10;
   padding: 0.5rem;
   font-size: 1.2rem;
   color: #333;
   background-color: #fff;
   border: none;
   border-radius: 20px;
+  margin-right: 15px;
 }
 
-#msg:focus {
+5#msg:focus {
   outline: none;
   box-shadow: 0 0 5px #ccc;
 }
 
-#msg .btn {
-  margin-right: 10px;
-}
-
-
-
 #name {
-  flex: 6;
+  flex: 1;
   padding: 0.5rem;
   font-size: 1.2rem;
   color: #333;
   background-color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
+  margin-right: 20px;
 }
 
-#name .btn {
-  margin-right: 10px;
-}
 
 #name:focus {
   outline: none;
