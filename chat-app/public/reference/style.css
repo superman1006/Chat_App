@@ -336,7 +336,7 @@ a:hover {
   margin-right: 15px;
 }
 
-5#msg:focus {
+#msg:focus {
   outline: none;
   box-shadow: 0 0 5px #ccc;
 }
