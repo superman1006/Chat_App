@@ -142,26 +142,22 @@ a:hover {
   height: 10px
 }
 
-/* 为 about-section 中的 ul 和 li 设置样式 */
+
 .about-section ul {
   list-style: disc;
-  /* 设置列表标志为实心圆点 */
   margin: 1.5em 0;
-  /* 设置上下边距为 1em */
   padding-left: 3em;
-  /* 设置左边距为 1.5em */
 }
 
 .about-section li {
   font-size: 17px;
   font-weight: 400;
   margin: 0.5em 0;
-  /* 设置上下边距为 0.5em */
 }
 
 
 
-/* Chat聊天室消息列表样式 */
+/* Chat Indicates the message list style of the chat room*/
 #chat-messages {
   list-style: none;
   margin: 0;
@@ -182,7 +178,7 @@ a:hover {
   background-color: #ddd;
 }
 
-/* 聊天室表单样式 */
+/* Chat room form style */
 
 #chat-form {
   display: flex;
@@ -272,7 +268,6 @@ a:hover {
 
 .chat-sidebar {
   display: flex;
-  /* margin-top: -150px; */
   width: 100%;
   height: 60px;
   justify-content: center;
@@ -309,22 +304,21 @@ a:hover {
   margin-top: 20px;
   padding: 20px;
   overflow: auto;
-  /* 或者使用 overflow: hidden; */
 }
 
-/* 定义滚动条轨道 */
+/* Define the scroll bar track */
 .chat-box::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
 
-/* 定义滑块 */
+/* Definition slider */
 .chat-box::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 5px;
 }
 
 
-/* 调整输入框样式 */
+/* Adjust the input box sample式 */
 #msg {
   flex: 10;
   padding: 0.5rem;
@@ -359,7 +353,7 @@ a:hover {
 }
 
 
-/* 调整消息发送按钮样式 */
+/* Adjust the message send button style */
 #send {
   flex: 1;
   padding: 0.5rem 1rem;

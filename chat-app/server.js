@@ -10,7 +10,7 @@ const express = require('express');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-// 维护在线用户列表
+// Maintain a list of online users
 const onlineUsers = new Map();
 
 // Serve static files
@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public'));
 io.on('connection', (socket) => {
   console.log('a user connected');
 
-  // 当有新用户连接时将其加入在线用户列表
+  // Add a new user to the online user list when the user is connected
   onlineUsers.set(socket.id, { id: socket.id });
 
   // Send a welcome message to the new user
@@ -40,7 +40,7 @@ io.on('connection', (socket) => {
     console.log('user left', reason);
     // Send a welcome message to the new user
     socket.emit('chat message', 'you have disconnected');
-    // 当有用户断开连接时将其从在线用户列表中移除
+    // Remove a user from the online user list when the user is disconnected
     onlineUsers.delete(socket.id);
     // Broadcast a message to all other connected clients
     socket.broadcast.emit('chat message', 'a user has disconnected');
@@ -50,14 +50,14 @@ io.on('connection', (socket) => {
   // Handle user left
   socket.on('disconnect', (reason) => {
     console.log('user left', reason);
-    // 当有用户断开连接时将其从在线用户列表中移除
+    // Remove a user from the online user list when the user is disconnected
     onlineUsers.delete(socket.id);
     // Broadcast a message to all other connected clients
     socket.broadcast.emit('chat message', 'a user has disconnected');
   });
 
 
-  // 处理获取在线用户列表的请求
+  // Processing requests to get a list of online users
   socket.on('get user list', () => {
     const userList = Array.from(onlineUsers.values());
     socket.emit('user list', userList);
