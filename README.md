@@ -93,7 +93,7 @@ __Chat-NodeJS chat room：__
 >### __Web screen__
 
 ### Introduction page
-![Image](/Home.png)
+![Image](http://localhost:3000/reference/Home.png)
 __1.Navigation bar__
 &nbsp;&nbsp;&nbsp;&nbsp;A fixed navigation bar at the top of a web page that contains links to Home, About Me, and Chat for jumping to different pages.
 
