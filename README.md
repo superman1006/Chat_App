@@ -93,6 +93,7 @@ __Chat-NodeJS chat room：__
 >### __Web screen__
 
 ### Introduction page
+(After starting the server, you can view the following picture)
 ![Image](http://localhost:3000/reference/Home.png)
 __1.Navigation bar__
 &nbsp;&nbsp;&nbsp;&nbsp;A fixed navigation bar at the top of a web page that contains links to Home, About Me, and Chat for jumping to different pages.
@@ -112,6 +113,7 @@ __5.Interactive animation__
 &nbsp;&nbsp;&nbsp;&nbsp;Overall, the page displays my personal information and hobbies and provides links to other pages through a simple and clear design.
 
 ### About page
+(After starting the server, you can view the following picture)
 ![Image](http://localhost:3000/reference/About.png)
 
 __1.Page header：__
@@ -126,7 +128,9 @@ __2.About Me Section：__
 &nbsp;&nbsp;1.Professional Skills: Introduces my proficiency in programming languages such as Java, Python and C++, as well as Web development techniques such as HTML, CSS and JavaScript, database techniques such as SQL and MongoDB, and software development tools such as Git, JIRA and Agile methods.
 &nbsp;&nbsp;2.Language Skills: This describes my fluency in English and Chinese (Mandarin) and oral and written communication skills, as well as technical and business translation and interpretation experience.
 &nbsp;&nbsp;3.Computer skills: Introduces the author's proficiency with Windows and Linux operating systems, as well as computer hardware and network concepts
+
 ### Chat page
+(After starting the server, you can view the following picture)
 ![Image](http://localhost:3000/reference/Chat.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp; After clicking the Chat option, the page jumps to the chat room page, which is divided into three parts: the chat room title, chat history display area and chat input area.
