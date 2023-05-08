@@ -1,5 +1,5 @@
-i## Chat-app
-
+## Chat-app
+***
 >### Project introduction
 &nbsp;&nbsp;&nbsp;Chat is a simple and practical chat room application developed based on Node.js and WebSocket technologies, using Express.js framework to build servers and routes, Bootstrap provides basic UI components and styles, and jQuery for DOM manipulation and event binding.
 
