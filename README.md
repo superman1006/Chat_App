@@ -1,4 +1,4 @@
-## Chat-app
+i## Chat-app
 >### Project introduction
 &nbsp;&nbsp;&nbsp;Chat is a simple and practical chat room application developed based on Node.js and WebSocket technologies, using Express.js framework to build servers and routes, Bootstrap provides basic UI components and styles, and jQuery for DOM manipulation and event binding.
 
@@ -34,8 +34,9 @@ $ npm start
 ```
 &nbsp;&nbsp;&nbsp;4.__Access application__
 
-&nbsp;&nbsp;&nbsp;__1.__ Open a browser and type http://localhost:3000, and you will see the details of the website.
-&nbsp;&nbsp;&nbsp;__2.__ If running in Codio, you can directly click the Box URL button on the upper right to browse the page details.
+&nbsp;&nbsp;&nbsp;__1.__ Start with Visual Studio Code and open a browser ,you can type http://localhost:3000, and you will see the details of the website.
+
+&nbsp;&nbsp;&nbsp;__2.__ If running in Codio, you can directly click the Box URL button on the upper right or type https://othellorichard-pressletter-3000.codio-box.uk/ in your browser to browse the page details.
 
 
 >### __Technology stack__
@@ -94,7 +95,9 @@ __Chat-NodeJS chat room：__
 
 ### Introduction page
 (After starting the server, you can view the following picture)
-![Image](chat-app/public/reference/Home.png)
+<!-- ![Image](chat-app/public/reference/Home.png) -->
+<div align = "center"><img width ="750" height = "400" src = "chat-app/public/reference/Home.png"></img>
+</div>
 __1.Navigation bar__
 &nbsp;&nbsp;&nbsp;&nbsp;A fixed navigation bar at the top of a web page that contains links to Home, About Me, and Chat for jumping to different pages.
 
@@ -114,7 +117,9 @@ __5.Interactive animation__
 
 ### About page
 (After starting the server, you can view the following picture)
-![Image](chat-app/public/reference/About.png)
+<!-- ![Image](chat-app/public/reference/About.png) -->
+<div align = "center"><img width ="750" height = "400" src = "chat-app/public/reference/About.png"></img>
+</div>
 
 __1.Page header：__
 &nbsp;&nbsp;&nbsp;&nbsp;Contains a site titled "About Me" that uses the Bootstrap CSS framework, as well as a custom CSS stylesheet. The page also contains three navigation links: Home, About Me, and Chat. These links allow you to navigate between pages.
@@ -131,7 +136,9 @@ __2.About Me Section：__
 
 ### Chat page
 (After starting the server, you can view the following picture)
-![Image](chat-app/public/reference/Chat.png)
+<!-- ![Image](chat-app/public/reference/Chat.png) -->
+<div align = "center"><img width ="750" height = "400" src = "chat-app/public/reference/Chat.png"></img>
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp; After clicking the Chat option, the page jumps to the chat room page, which is divided into three parts: the chat room title, chat history display area and chat input area.
 
