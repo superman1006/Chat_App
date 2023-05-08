@@ -94,7 +94,7 @@ __Chat-NodeJS chat room：__
 
 ### Introduction page
 (After starting the server, you can view the following picture)
-![Image](http://localhost:3000/reference/Home.png)
+![Image](chat-app/public/reference/Home.png)
 __1.Navigation bar__
 &nbsp;&nbsp;&nbsp;&nbsp;A fixed navigation bar at the top of a web page that contains links to Home, About Me, and Chat for jumping to different pages.
 
@@ -114,7 +114,7 @@ __5.Interactive animation__
 
 ### About page
 (After starting the server, you can view the following picture)
-![Image](http://localhost:3000/reference/About.png)
+![Image](chat-app/public/reference/About.png)
 
 __1.Page header：__
 &nbsp;&nbsp;&nbsp;&nbsp;Contains a site titled "About Me" that uses the Bootstrap CSS framework, as well as a custom CSS stylesheet. The page also contains three navigation links: Home, About Me, and Chat. These links allow you to navigate between pages.
@@ -131,7 +131,7 @@ __2.About Me Section：__
 
 ### Chat page
 (After starting the server, you can view the following picture)
-![Image](http://localhost:3000/reference/Chat.png)
+![Image](chat-app/public/reference/Chat.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp; After clicking the Chat option, the page jumps to the chat room page, which is divided into three parts: the chat room title, chat history display area and chat input area.
 
